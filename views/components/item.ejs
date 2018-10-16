@@ -1,0 +1,21 @@
+<li class="list-group-item row">
+    <% if (item.isFinished) { %>
+    <h4 class="col-xs-6 text-muted del"><%= item.content %></h4>
+    <% } else { %>
+    <h4 class="col-xs-6 text-danger"><%= item.content %></h4>
+    <% } %>
+
+    <div class="btn-group pull-right" role="group">
+        <% if (item.isFinished) { %>
+        <a href="/toggle/<%= item.id %>" type="button" class="btn btn-default glyphicon glyphicon-ok toggle"></a>
+        <% } else { %>
+        <a href="/toggle/<%= item.id %>" type="button" class="btn btn-danger glyphicon glyphicon-ok toggle"></a>
+        <% } %>
+
+        <a data-id="<%= item.id %>" data-toggle="modal" data-target="#myModal" type="button" class="btn btn-default glyphicon glyphicon-edit toggle"></button>
+        <a href="/delete/<%= item.id %>" type="button" class="btn btn-default glyphicon glyphicon-trash delete"></a>
+    </div>
+</li>
+
+
+ 

@@ -1,0 +1,18 @@
+.list-group-item.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.list-group-item.row h4.del {
+    text-decoration: line-through;
+}
+
+.panel-footer span::after {
+    content: '/';
+    padding: 0 1rem;
+
+}
+
+/* .btn-group {
+    display: none;
+} */
